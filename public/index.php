@@ -2,17 +2,17 @@
  /**
   * Routing
   */
- include('../App/Views/template.php');
+
+// include('../App/Views/template.php');
 require('../App/Controllers/mainController.php');
 
 $url = $_SERVER['QUERY_STRING'];
-$page = $_GET[$url];
 
 try{
-    if(isset($page)){
-        if($page == 'Inscription'){
+    if(isset($url)){
+        if($url == 'Inscription'){
             signUp();
-        }elseif($page == 'Connexion'){
+        }elseif($url == 'Connexion'){
             signIn();
         }
     }

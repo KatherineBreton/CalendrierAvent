@@ -16,7 +16,6 @@
     <script src="../../public/Assets/JS/"></script>
 </head>
     <body>
-        <?= $content;
-        var_dump($title);?>
+        <?= $content;?>
     </body>
 </html>

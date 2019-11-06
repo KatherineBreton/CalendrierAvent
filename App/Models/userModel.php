@@ -22,10 +22,10 @@ class UserModel extends Manager
     public function signUp(){
         $db = $this->dbConnect();
 
-        $req = $db->prepare('INSERT INTO t_user (use_mail, use_password VALUES (:mail, :password)');
+        $req = $db->prepare('INSERT INTO t_user (use_mail, use_password) VALUES (:mail, :password)');
         $req->execute([
             'mail' => $_POST['mail'],
-            'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
+            'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
         ]);
 
         return $req;
