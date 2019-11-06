@@ -24,8 +24,8 @@ class UserModel extends Manager
 
         $req = $db->prepare('INSERT INTO t_user (use_mail, use_password) VALUES (:mail, :password)');
         $submit = $req->execute([
-            'mail' => $_POST['mail'],
-            'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
+            'mail' => htmlspecialchars($_POST['mail']),
+            'password' => password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT),
         ]);
 
         return $submit;
@@ -39,10 +39,10 @@ class UserModel extends Manager
         $req->execute([
             'mail' => $_POST['mail']
         ]);
-        $res = $req->fetch(PDO::FETCH_ASSOC);
+        $res = $req->fetchAll(PDO::FETCH_ASSOC);
         $correctPass = password_verify($_POST['password'], $res['USE_PASSWORD']);
 
-        return $req;
+        return $res;
     }
 
     public function displayProfile(){
