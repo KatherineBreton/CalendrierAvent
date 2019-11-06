@@ -17,6 +17,6 @@ ob_start();?>
     </form>
 
 <?php
-//header('../App/Views.signIn.html.php');
+//header('Location: ../App/Views.signIn.html.php');
 $content = ob_get_clean();
 require('template.php');

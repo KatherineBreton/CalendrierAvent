@@ -23,12 +23,12 @@ class UserModel extends Manager
         $db = $this->dbConnect();
 
         $req = $db->prepare('INSERT INTO t_user (use_mail, use_password) VALUES (:mail, :password)');
-        $req->execute([
+        $submit = $req->execute([
             'mail' => $_POST['mail'],
             'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
         ]);
 
-        return $req;
+        return $submit;
     }
 
     public function signIn(){
@@ -48,11 +48,10 @@ class UserModel extends Manager
     public function displayProfile(){
         $db = $this->dbConnect();
 
-        $req = $db->prepare('SELECT use_mail FROM t_user WHERE use_id =' . $_SESSION['id']);
+        $req = $db->prepare('SELECT use_mail, use_password FROM t_user WHERE use_id = 2' /*. $_SESSION['id']*/);
         $req->execute();
         $userProfile = $req->fetchAll(PDO::FETCH_ASSOC);
 
         return $userProfile;
     }
-
 }

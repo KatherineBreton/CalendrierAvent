@@ -14,6 +14,8 @@ try{
             signUp();
         }elseif($url == 'Connexion'){
             signIn();
+        }elseif($url == 'Test'){
+            displayProfile();
         }
     }
 }catch(Exception $e){
