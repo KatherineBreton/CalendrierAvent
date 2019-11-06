@@ -16,6 +16,9 @@ try{
             signIn();
         }elseif($url == 'Test'){
             displayProfile();
+        }elseif($url == 'Controllers/mainController.php'){
+            signIn();
+//            require('../App/Views/signIn.html.php');
         }
     }
 }catch(Exception $e){

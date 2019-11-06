@@ -4,7 +4,7 @@ $title = 'Connexion';
 ob_start();?>
 
 <h2>Connexion</h2>
-    <form action="../Controllers/mainController.php" method="post">
+    <form action="Connexion" method="post">
         <label for="mail">Adresse mail</label>
         <input type="email">
 

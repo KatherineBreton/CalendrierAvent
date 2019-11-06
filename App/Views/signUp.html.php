@@ -3,7 +3,7 @@ $title = 'Inscription';
 ob_start();?>
 
     <h2>Inscription</h2>
-    <form action="../Controllers/mainController.php" method="post">
+    <form action="Inscription" method="post">
         <label for="mail">Adresse mail</label>
         <input id="mail" type="email" name="mail">
 
