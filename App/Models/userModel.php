@@ -8,16 +8,6 @@ require('Manager.php');
 session_start();
 class UserModel extends Manager
 {
-    public function allUsers(){
-        $db = $this->dbConnect();
-
-        $req = $db->prepare('SELECT use_mail FROM t_user');
-        $req->execute();
-        $usersInfo = $req->fetchAll(PDO::FETCH_ASSOC);
-
-        return $usersInfo;
-    }
-
     public function signUp(){
         $db = $this->dbConnect();
 
@@ -51,5 +41,15 @@ class UserModel extends Manager
         $userProfile = $req->fetchAll(PDO::FETCH_ASSOC);
 
         return $userProfile;
+    }
+
+    public function writeMessage(){
+        $db = $this->dbConnect();
+        $req = $db->prepare('INSERT INTO t_support (sup_title, sup_message, sup_date) VALUES (:title, :message, NOW())');
+        $messageSend = $req->execute([
+            'title' => $_POST['title'],
+            'message' => $_POST['message']
+        ]);
+        return $messageSend;
     }
 }

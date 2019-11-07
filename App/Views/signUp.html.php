@@ -17,6 +17,7 @@ ob_start();?>
         <input id="passwordConfirm" type="password" name="passwordConfirm" required>
 
         <input type="submit" value="S'inscrire">
+        <a href="Connexion">Se connecter</a>
     </form>
 
 <?php

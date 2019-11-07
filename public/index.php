@@ -3,29 +3,31 @@
   * Routing
   */
 
-require('../App/Controllers/mainController.php');
+require('../App/Controllers/userController.php');
 
 $url = $_SERVER['QUERY_STRING'];
 
 try{
     if(isset($url)){
-        $controller = new userController();
+        $userController = new userController();
         if($url == 'Inscription'){
             if($_SESSION){
-                $displayProfile = $controller->displayProfile();
+                $displayProfile = $userController->displayProfile();
             }else{
-                $signUp = $controller->signUp();
+                $signUp = $userController->signUp();
             }
         }elseif($url == 'Connexion'){
             if($_SESSION){
-                $displayProfile = $controller->displayProfile();
+                $displayProfile = $userController->displayProfile();
             }else{
-                $signIn = $controller->signIn();
+                $signIn = $userController->signIn();
             }
         }elseif($url == 'Profil'){
-            $displayProfile = $controller->displayProfile();
+            $displayProfile = $userController->displayProfile();
         }elseif($url == 'Deconnexion'){
-            $logout = $controller->logout();
+            $logout = $userController->logout();
+        }elseif($url == 'MessageSupport'){
+            $messageSupport = $userController->messageSupport();
         }
     }
 }catch(Exception $e){
