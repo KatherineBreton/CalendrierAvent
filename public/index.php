@@ -3,7 +3,6 @@
   * Routing
   */
 
-// include('../App/Views/template.php');
 require('../App/Controllers/mainController.php');
 
 $url = $_SERVER['QUERY_STRING'];
@@ -13,12 +12,15 @@ try{
         if($url == 'Inscription'){
             signUp();
         }elseif($url == 'Connexion'){
-            signIn();
-        }elseif($url == 'Test'){
+            if($_SESSION){
+                displayProfile();
+            }else{
+                signIn();
+            }
+        }elseif($url == 'Profil'){
             displayProfile();
-        }elseif($url == 'Controllers/mainController.php'){
-            signIn();
-//            require('../App/Views/signIn.html.php');
+        }elseif($url == 'Deconnexion'){
+            logout();
         }
     }
 }catch(Exception $e){

@@ -1,12 +1,11 @@
 <?php
 
-//namespace App\Models;
-
 require('Manager.php');
 
 /**
  * Class UserModel
  */
+session_start();
 class UserModel extends Manager
 {
     public function displayUsers(){
@@ -33,14 +32,12 @@ class UserModel extends Manager
 
     public function signIn(){
         $db = $this->dbConnect();
-        global $correctPass;
 
         $req = $db->prepare('SELECT * FROM t_user WHERE use_mail = :mail');
         $req->execute([
-            'mail' => $_POST['mail']
+            'mail' => htmlspecialchars($_POST['mail'])
         ]);
         $res = $req->fetchAll(PDO::FETCH_ASSOC);
-        $correctPass = password_verify($_POST['password'], $res['USE_PASSWORD']);
 
         return $res;
     }
@@ -48,7 +45,7 @@ class UserModel extends Manager
     public function displayProfile(){
         $db = $this->dbConnect();
 
-        $req = $db->prepare('SELECT use_mail, use_password FROM t_user WHERE use_id = 2' /*. $_SESSION['id']*/);
+        $req = $db->prepare('SELECT use_mail, use_password FROM t_user WHERE use_id = ' . $_SESSION['id']);
         $req->execute();
         $userProfile = $req->fetchAll(PDO::FETCH_ASSOC);
 

@@ -6,7 +6,7 @@ function signUp(){
     require('../App/Views/signUp.html.php');
     $userModel = new userModel();
     if(!empty($_POST)){
-//        if(preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['mail'])){
+        if(preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['mail'])){
             if($_POST['password'] == $_POST['passwordConfirm']){
                 $signUp = $userModel->signUp();
 //                var_dump($signUp);
@@ -15,7 +15,7 @@ function signUp(){
                     throw new Exception("Impossible d'ajouter l'utilisateur");
                 }
             }
-//        }
+        }
     }
 }
 
@@ -23,7 +23,15 @@ function signIn(){
     require('../App/Views/signIn.html.php');
     $userModel = new userModel();
         $signIn = $userModel->signIn();
-        var_dump($signIn);
+        if(!empty($_POST)){
+            if(password_verify($_POST['password'], $signIn[0]['USE_PASSWORD'])){
+                $_SESSION['id'] = $signIn[0]['USE_ID'];
+                $_SESSION['mail'] = $signIn[0]['USE_MAIL'];
+                echo "Vous êtes bien connecté " . $_SESSION['mail'];
+            }else{
+                echo "Mauvais mail ou mot de passe";
+            }
+        }
 }
 
 //function displayAllUsers(){
@@ -38,9 +46,9 @@ function displayProfile(){
     var_dump($display);
 }
 
-//function logout() {
-//    session_start();
-//    $_SESSION = array();
-//    session_destroy();
-//    header('Location:index.php');
-//}
+function logout() {
+    session_start();
+    $_SESSION = array();
+    session_destroy();
+    header('Location: ');
+}
