@@ -9,18 +9,23 @@ $url = $_SERVER['QUERY_STRING'];
 
 try{
     if(isset($url)){
+        $controller = new userController();
         if($url == 'Inscription'){
-            signUp();
+            if($_SESSION){
+                $displayProfile = $controller->displayProfile();
+            }else{
+                $signUp = $controller->signUp();
+            }
         }elseif($url == 'Connexion'){
             if($_SESSION){
-                displayProfile();
+                $displayProfile = $controller->displayProfile();
             }else{
-                signIn();
+                $signIn = $controller->signIn();
             }
         }elseif($url == 'Profil'){
-            displayProfile();
+            $displayProfile = $controller->displayProfile();
         }elseif($url == 'Deconnexion'){
-            logout();
+            $logout = $controller->logout();
         }
     }
 }catch(Exception $e){

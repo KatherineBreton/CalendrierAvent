@@ -1,3 +1,7 @@
-<?php
-session_start();
-var_dump(session_start());
+<h2>Profil Utilisateur</h2>
+
+<p>Bonjour <?=$_SESSION['fname']?></p>
+<p>Votre adresse mail est <?=$_SESSION['mail']?></p>
+<!--<p>Vous vous êtes inscrit le --><?//= ?><!--</p>-->
+
+<a href="Deconnexion">Déconnexion</a>

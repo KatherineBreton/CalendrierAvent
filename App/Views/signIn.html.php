@@ -12,6 +12,7 @@ ob_start();?>
         <input type="password" name="password">
 
         <input type="submit" value="Se connecter">
+        <a href="Inscription">S'inscrire</a>
     </form>
 <?php
 $content = ob_get_clean();

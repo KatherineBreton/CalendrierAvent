@@ -7,6 +7,9 @@ ob_start();?>
         <label for="mail">Adresse mail</label>
         <input id="mail" type="email" name="mail" required>
 
+        <label for="fname">Prénom</label>
+        <input id="fname" type="text" name="fname" required>
+
         <label for="password">Mot de passe</label>
         <input id="password" type="password" name="password" required>
 
@@ -17,6 +20,5 @@ ob_start();?>
     </form>
 
 <?php
-//header('Location: ../App/Views.signIn.html.php');
 $content = ob_get_clean();
 require('template.php');
