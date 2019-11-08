@@ -10,6 +10,7 @@ ob_start();?>
 <!--<p>Vous vous êtes inscrit le --><?//= ?><!--</p>-->
 
 <a href="Deconnexion">Déconnexion</a>
+<a href="MessageSupport">Écrire au support</a>
 
 <?php
 $content = ob_get_clean();

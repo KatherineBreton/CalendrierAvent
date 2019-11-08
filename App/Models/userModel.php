@@ -43,6 +43,7 @@ class UserModel extends Manager
         return $userProfile;
     }
 
+    //    Ajouter table association
     public function writeMessage(){
         $db = $this->dbConnect();
         $req = $db->prepare('INSERT INTO t_support (sup_title, sup_message, sup_date) VALUES (:title, :message, NOW())');

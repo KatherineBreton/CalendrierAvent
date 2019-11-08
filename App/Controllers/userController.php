@@ -64,6 +64,7 @@ class UserController{
         header('Location: Connexion');
     }
 
+//    Ajouter table association
     public function messageSupport(){
         require('../App/Views/messageSupport.html.php');
         $userModel = new userModel();
