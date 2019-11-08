@@ -20,6 +20,7 @@ class prizeController{
         require('../App/Views/calendar.html.php');
         $prizeModel = new prizeModel();
         $getPrize = $prizeModel->getRandomPrize();
+        var_dump($getPrize);
         return $getPrize;
     }
 }

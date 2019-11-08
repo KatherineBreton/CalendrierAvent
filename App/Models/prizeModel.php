@@ -23,8 +23,10 @@ class PrizeModel extends Manager
     public function getRandomPrize(){
         $db = $this->dbConnect();
 
-        $req = $db->prepare('SELECT * FROM t_prize');
+        $req = $db->prepare('SELECT * FROM t_prize ORDER BY rand()');
         $req->execute();
+        $randomPrize = $req->fetch(PDO::FETCH_ASSOC);
+        return $randomPrize;
     }
 
 
