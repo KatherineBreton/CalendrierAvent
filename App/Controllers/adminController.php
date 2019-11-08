@@ -1,7 +1,6 @@
 <?php
 
-require('../Models/adminModel.php');
-
+require('../App/Models/adminModel.php');
 /**
  * Class adminController
  */
@@ -38,6 +37,7 @@ class adminController{
     /**
      * @return array
      */
+//    Ajouter jointure avec la table envoyer
     public function readMessages(){
         require('../App/Views/listMessages');
         if($this->adminVerify()){

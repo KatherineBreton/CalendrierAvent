@@ -33,12 +33,16 @@ class UserController{
         if(!empty($_POST)){
             $signIn = $userModel->signIn();
             if(password_verify($_POST['password'], $signIn[0]['USE_PASSWORD'])){
-                $_SESSION['id'] = $signIn[0]['USE_ID'];
-                $_SESSION['mail'] = $signIn[0]['USE_MAIL'];
-                $_SESSION['fname'] = $signIn[0]['USE_FNAME'];
-                $_SESSION['date'] = $signIn[0]['USE_DATE'];
-                header('Location: Profil');
-                return $signIn;
+                if($signIn[0]['USE_ISBANNED'] == 0){
+                    $_SESSION['id'] = $signIn[0]['USE_ID'];
+                    $_SESSION['mail'] = $signIn[0]['USE_MAIL'];
+                    $_SESSION['fname'] = $signIn[0]['USE_FNAME'];
+                    $_SESSION['date'] = $signIn[0]['USE_DATE'];
+                    header('Location: Profil');
+                    return $signIn;
+                }else{
+                    echo "Vous avez été banni, vous ne pouvez plus vous connecter";
+                }
             }else{
                 echo "Mauvais mail ou mot de passe";
             }

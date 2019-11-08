@@ -1,8 +1,9 @@
 <?php
-$title = "Liste des prix";
+$title = "Calendrier de l'Avent";
 ob_start();?>
 
-<h2>Liste des prix</h2>
+<h2>Calendrier de l'Avent</h2>
+
 
 <?php
 $content = ob_get_clean();
