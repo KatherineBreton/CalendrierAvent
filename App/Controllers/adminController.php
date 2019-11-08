@@ -2,8 +2,15 @@
 
 require('../Models/adminModel.php');
 
+/**
+ * Class adminController
+ */
 class adminController{
-//    Controller que la case admin est true
+    /**
+     * @return bool
+     * Vérifie si l'utilisateur a des droits administrateur
+     * Si retourne true, l'utilisateur est admin
+     */
     public function adminVerify(){
         $adminModel = new adminModel();
         $adminVerify = $adminModel->isAdmin();
@@ -14,7 +21,9 @@ class adminController{
         }
     }
 
-//    fonction lister les utilisateurs
+    /**
+     * @return array
+     */
     public function listAllUsers(){
         require('../App/Views/listAllUsers');
         if($this->adminVerify()){
@@ -22,11 +31,13 @@ class adminController{
             $listAllUsers = $adminModel->allUsers();
             return $listAllUsers;
         }else{
-            return "Vous devez avoir les droits administrateur pour accéder à cette page";
+            echo "Vous devez avoir les droits administrateur pour accéder à cette page";
         }
     }
 
-//    fonction lire les messages support
+    /**
+     * @return array
+     */
     public function readMessages(){
         require('../App/Views/listMessages');
         if($this->adminVerify()){
@@ -34,7 +45,7 @@ class adminController{
             $readMessages = $adminModel->readMessages();
             return $readMessages;
         }else{
-            return "Vous devez avoir les droits administrateur pour accéder à cette page";
+            echo "Vous devez avoir les droits administrateur pour accéder à cette page";
         }
     }
 
@@ -43,7 +54,7 @@ class adminController{
         if($this->adminVerify()){
 
         }else{
-            return "Vous devez avoir les droits administrateur pour accéder à cette page";
+            echo "Vous devez avoir les droits administrateur pour accéder à cette page";
         }
     }
 

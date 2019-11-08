@@ -2,6 +2,9 @@
 
 require('../App/Models/userModel.php');
 
+/**
+ * Class UserController
+ */
 class UserController{
     public function signUp(){
         require('../App/Views/signUp.html.php');
@@ -33,6 +36,7 @@ class UserController{
                 $_SESSION['id'] = $signIn[0]['USE_ID'];
                 $_SESSION['mail'] = $signIn[0]['USE_MAIL'];
                 $_SESSION['fname'] = $signIn[0]['USE_FNAME'];
+                $_SESSION['date'] = $signIn[0]['USE_DATE'];
                 header('Location: Profil');
                 return $signIn;
             }else{
@@ -41,13 +45,10 @@ class UserController{
         }
     }
 
-//public function displayAllUsers(){
-//    $userModel = new userModel();
-//    $display = $userModel->allUsers();
-//    var_dump($display);
-//    return $display;
-//}
-
+    /**
+     * @return array
+     * Affiche le profil de l'utilisateur connecté
+     */
     public function displayProfile(){
         require('../App/Views/displayProfile.html.php');
         $userModel = new userModel();
@@ -64,12 +65,16 @@ class UserController{
         header('Location: Connexion');
     }
 
-//    Ajouter table association
+    /**
+     * @return bool
+     */
     public function messageSupport(){
         require('../App/Views/messageSupport.html.php');
         $userModel = new userModel();
-        $message = $userModel->writeMessage();
-        return $message;
+        if(!empty($_POST)) {
+            $message = $userModel->writeMessage();
+            return $message;
+        }
     }
 }
 

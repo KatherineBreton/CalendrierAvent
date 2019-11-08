@@ -1,5 +1,5 @@
 <?php
-$title = "Message au support";
+$title = "Écrire au support";
 
 ob_start();?>
 <h2>Écrire au support</h2>
@@ -11,6 +11,7 @@ ob_start();?>
         <textarea name="message"></textarea>
 
         <input type="submit" value="Envoyer le message">
+        <a href="Profil">Afficher mon profil</a>
     </form>
 
 <?php

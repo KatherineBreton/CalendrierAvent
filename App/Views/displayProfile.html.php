@@ -7,7 +7,7 @@ ob_start();?>
 
 <p>Bonjour <?=$_SESSION['fname']?></p>
 <p>Votre adresse mail est <?=$_SESSION['mail']?></p>
-<!--<p>Vous vous êtes inscrit le --><?//= ?><!--</p>-->
+<p>Vous vous êtes inscrit le <?= $_SESSION['date']?></p>
 
 <a href="Deconnexion">Déconnexion</a>
 <a href="MessageSupport">Écrire au support</a>
