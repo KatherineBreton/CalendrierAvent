@@ -3,15 +3,17 @@
   * Routing
   */
 
-require('../App/Controllers/userController.php');
-require('../App/Controllers/prizeController.php');
+require_once('../App/Controllers/userController.php');
+require_once('../App/Controllers/prizeController.php');
+require_once('../App/Controllers/adminController.php');
+session_start();
 
 $url = $_SERVER['QUERY_STRING'];
 
 try{
     if(isset($url)){
         $userController = new userController();
-//        $prizeController = new prizeController();
+        $prizeController = new prizeController();
         if($url == 'Inscription'){
             if($_SESSION){
                 $displayProfile = $userController->displayProfile();
@@ -34,9 +36,9 @@ try{
             $logout = $userController->logout();
         }elseif($url == 'MessageSupport'){
             $messageSupport = $userController->messageSupport();
-        }/*elseif($url == 'Calendrier'){
-            $calendar = $prizeController->getPrize();
-        }*/
+        }elseif($url == 'Calendrier'){
+            $calendar = $prizeController->getRandomPrize();
+        }
     }
 }catch(Exception $e){
     echo 'Erreur : ' . $e->getMessage();

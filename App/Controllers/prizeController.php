@@ -1,6 +1,6 @@
 <?php
 
-//require('../App/Models/prizeModel.php');
+require_once('../App/Models/prizeModel.php');
 
 /**
  * Class prizeController
@@ -16,8 +16,8 @@ class prizeController{
         return $display;
     }
 
-    public function getPrize(){
-        require('../App/calendar.html.php');
+    public function getRandomPrize(){
+        require('../App/Views/calendar.html.php');
         $prizeModel = new prizeModel();
         $getPrize = $prizeModel->getRandomPrize();
         return $getPrize;

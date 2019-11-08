@@ -1,6 +1,6 @@
 <?php
 
-require('Manager.php');
+require_once('Manager.php');
 
 /**
  * Class PrizeModel

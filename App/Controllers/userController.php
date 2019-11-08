@@ -1,6 +1,6 @@
 <?php
 
-require('../App/Models/userModel.php');
+require_once('../App/Models/userModel.php');
 
 /**
  * Class UserController

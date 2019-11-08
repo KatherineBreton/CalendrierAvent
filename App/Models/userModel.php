@@ -1,7 +1,7 @@
 <?php
 
-require('Manager.php');
-session_start();
+require_once('Manager.php');
+//session_start();
 
 /**
  * Class UserModel

@@ -1,8 +1,7 @@
 <?php
 
-require('Manager.php');
+require_once('Manager.php');
 
-session_start();
 class AdminModel extends Manager
 {
     public function isAdmin(){

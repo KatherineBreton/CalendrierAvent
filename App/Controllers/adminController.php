@@ -1,6 +1,6 @@
 <?php
 
-require('../App/Models/adminModel.php');
+require_once('../App/Models/adminModel.php');
 /**
  * Class adminController
  */
