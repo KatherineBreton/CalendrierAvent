@@ -66,7 +66,7 @@ class UserController{
         session_start();
         $_SESSION = array();
         session_destroy();
-        header('Location: Connexion');
+        header('Location: /Connexion');
         return true;
     }
 

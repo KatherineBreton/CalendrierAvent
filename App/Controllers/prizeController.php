@@ -16,16 +16,7 @@ class prizeController{
         return $display;
     }
 
-//    public function (){
-//        require('../App/Views/calendar.html.php');
-//        $prizeModel = new prizeModel();
-//        $getPrize = $prizeModel->getRandomPrize();
-//
-//        return $getPrize;
-//    }
-
     public function getRandomPrize(){
-//        require('../App/Views/win.html.php');
         $prizeModel = new prizeModel();
         $getPrize = $prizeModel->getRandomPrize();
         return $getPrize;
@@ -45,5 +36,17 @@ class prizeController{
         }
     }
 
-//    Fonction si le name du a est égal au date du jour (currentDate), l'user a gagné, sinon on le redirige (header)
+//    Fonction qui vérifie si un user a déjà joué aujourd'hui
+    public function verifyDay(){
+        $prizeModel = new PrizeModel();
+        $verify = $prizeModel->allWonPrizes();
+//        return $verify;
+        for($i = 0; $i < $verify; $i++){
+            if(($verify[$i]['PRI_DATESELECTED'] == $this->generateDate()) && ($verify[$i]['USE_ID'] == $_SESSION['id'])){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
 }

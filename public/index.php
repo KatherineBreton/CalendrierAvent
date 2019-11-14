@@ -34,17 +34,33 @@ try{
                 $signIn = $userController->signIn();
             }
         }elseif($url == '/Deconnexion'){
-            $logout = $userController->logout();
+            if($_SESSION) {
+                $logout = $userController->logout();
+            }else{
+                $signIn = $userController->signIn();
+            }
         }elseif($url == '/MessageSupport'){
             $messageSupport = $userController->messageSupport();
         }elseif($url == '/Calendrier'){
-//            $calendar = $prizeController->getRandomPrize();
-            require('../App/Views/calendar.html.php');
+            if($_SESSION){
+//                $calendar = $prizeController->getRandomPrize();
+                require('../App/Views/calendar.html.php');
+            }else{
+                $signIn = $userController->signIn();
+            }
         }elseif($url == '/Gagne'){
-            require('../App/Views/win.html.php');
-            $win = $prizeController->getRandomPrize();
+            if($_SESSION) {
+                require('../App/Views/win.html.php');
+//                $win = $prizeController->getRandomPrize();
+            }else{
+                $signIn = $userController->signIn();
+            }
         }elseif($url == '/mauvaisJour'){
-            require('../App/Views/badDay.html.php');
+            if($_SESSION) {
+                require('../App/Views/badDay.html.php');
+            }else{
+                $signIn = $userController->signIn();
+            }
         }
     }
 }catch(Exception $e){

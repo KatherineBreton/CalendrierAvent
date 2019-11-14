@@ -66,4 +66,13 @@ class adminController{
             echo "Vous devez avoir les droits administrateur pour accéder à cette page";
         }
     }
+
+    //fonction choisir
+    public function prizeStat(){
+        if($this->adminVerify()){
+
+        }else{
+            echo "Vous devez avoir les droits d'administrateur pour accéder à cette page";
+        }
+    }
 }
