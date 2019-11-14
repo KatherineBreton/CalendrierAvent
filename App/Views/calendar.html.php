@@ -1,14 +1,49 @@
 <?php
 $title = "Calendrier de l'Avent";
-ob_start();?>
+ob_start();
 
-<h2>Calendrier de l'Avent</h2>
-<!--Envoyer vers le routeur pour exécuter une requête SQL pour choisir au hasard-->
-    <form action="Calendrier" method="post">
-        <input id="1" type="image" src="../../Assets/Images/icon.png" alt="submit">
-        <input id="2" type="image" src="../../Assets/Images/icon.png" alt="submit">
-        <input id="3" type="image" src="../../Assets/Images/icon.png" alt="submit">
-    </form>
+$prizeController = new prizeController;
+$currentDate = $prizeController->generateDate();
+var_dump($currentDate);
+
+//Tableau associatif avec les dates en index, et vide au niveau des prix
+$dates = [];
+for($i = 1; $i <= 25; $i++) {
+    $day = str_pad($i, 2, '0', STR_PAD_LEFT);
+    $dates["2019-12-$day"] = [];
+}
+
+//$wins = [
+//    [
+//        'pri_dateSelected' => '2019-12-03'
+//    ]
+//];
+
+//Fonction qui génère le prix lié à l'utilisateur
+//$wins = getRandomPrize();
+
+//On remplit le tableau au niveau des prix par jours selon l'utilisateur connecté pour avoir un historique
+//foreach($wins as $win) {
+//    $dates[$win['pri_dateSelected']] = $win;
+//}
+//?>
+
+    <h2>Calendrier de l'Avent</h2>
+    <div id="avent-calendar">
+        <?php foreach($dates as $date => $price):
+//            var_dump($price);
+        ?>
+<!--        On génère une div à chaque itération avec la date en class pour les différencier-->
+            <div class="calendar-item calendar-item-<?php echo $date; ?>">
+                <a href="<?php $href = '';?>" name="<?php echo $date; ?><?php echo $date == $currentDate ? $href="/Gagne" : $href='/Perdu'?>">
+                    <img src="../../Assets/Images/icon.png" alt="">
+<!--                    --><?php //if(!empty($price)):?>
+<!--                        --><?php //print_r($price) ?>
+<!--                    --><?php //endif;?>
+                </a>
+            </div>
+        <?php endforeach;?>
+    </div>
 
 <?php
 $content = ob_get_clean();

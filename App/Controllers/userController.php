@@ -67,6 +67,7 @@ class UserController{
         $_SESSION = array();
         session_destroy();
         header('Location: Connexion');
+        return true;
     }
 
     /**

@@ -8,36 +8,40 @@ require_once('../App/Controllers/prizeController.php');
 require_once('../App/Controllers/adminController.php');
 session_start();
 
-$url = $_SERVER['QUERY_STRING'];
+//Permet de passer des variables dans l'URL ($_GET)
+$url = $_SERVER['REDIRECT_URL'];
 
 try{
     if(isset($url)){
         $userController = new userController();
         $prizeController = new prizeController();
-        if($url == 'Inscription'){
+        if($url == '/Inscription'){
             if($_SESSION){
                 $displayProfile = $userController->displayProfile();
             }else{
                 $signUp = $userController->signUp();
             }
-        }elseif($url == 'Connexion'){
+        }elseif($url == '/Connexion'){
             if($_SESSION){
                 $displayProfile = $userController->displayProfile();
             }else{
                 $signIn = $userController->signIn();
             }
-        }elseif($url == 'Profil'){
+        }elseif($url == '/Profil'){
             if($_SESSION){
                 $displayProfile = $userController->displayProfile();
             }else{
                 $signIn = $userController->signIn();
             }
-        }elseif($url == 'Deconnexion'){
+        }elseif($url == '/Deconnexion'){
             $logout = $userController->logout();
-        }elseif($url == 'MessageSupport'){
+        }elseif($url == '/MessageSupport'){
             $messageSupport = $userController->messageSupport();
-        }elseif($url == 'Calendrier'){
-            $calendar = $prizeController->getRandomPrize();
+        }elseif($url == '/Calendrier'){
+//            $calendar = $prizeController->getRandomPrize();
+            require('../App/Views/calendar.html.php');
+        }elseif($url == '/Gagne'){
+            $win = $prizeController->getRandomPrize();
         }
     }
 }catch(Exception $e){
