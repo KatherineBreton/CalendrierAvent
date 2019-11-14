@@ -41,7 +41,10 @@ try{
 //            $calendar = $prizeController->getRandomPrize();
             require('../App/Views/calendar.html.php');
         }elseif($url == '/Gagne'){
+            require('../App/Views/win.html.php');
             $win = $prizeController->getRandomPrize();
+        }elseif($url == '/mauvaisJour'){
+            require('../App/Views/badDay.html.php');
         }
     }
 }catch(Exception $e){

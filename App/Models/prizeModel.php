@@ -29,5 +29,4 @@ class PrizeModel extends Manager
         return $randomPrize;
     }
 
-
 }

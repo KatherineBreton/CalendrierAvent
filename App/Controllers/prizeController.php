@@ -25,10 +25,9 @@ class prizeController{
 //    }
 
     public function getRandomPrize(){
-        require('../App/Views/win.html.php');
+//        require('../App/Views/win.html.php');
         $prizeModel = new prizeModel();
         $getPrize = $prizeModel->getRandomPrize();
-
         return $getPrize;
     }
 

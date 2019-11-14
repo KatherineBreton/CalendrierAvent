@@ -4,7 +4,6 @@ ob_start();
 
 $prizeController = new prizeController;
 $currentDate = $prizeController->generateDate();
-var_dump($currentDate);
 
 //Tableau associatif avec les dates en index, et vide au niveau des prix
 $dates = [];
@@ -35,7 +34,7 @@ for($i = 1; $i <= 25; $i++) {
         ?>
 <!--        On génère une div à chaque itération avec la date en class pour les différencier-->
             <div class="calendar-item calendar-item-<?= $date; ?>">
-                <a name="<?= $date; ?>"<?= $date == $currentDate ? $href="/Gagne" : $href="/Perdu";?> href="<?= $href;?>">
+                <a name="<?= $date; ?>"<?= $date == $currentDate ? $href="/Gagne" : $href="/mauvaisJour";?> href="<?= $href;?>">
                     <img src="../../Assets/Images/icon.png" alt="">
 <!--                    --><?php //if(!empty($price)):?>
 <!--                        --><?php //print_r($price) ?>
