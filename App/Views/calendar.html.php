@@ -34,8 +34,8 @@ for($i = 1; $i <= 25; $i++) {
 //            var_dump($price);
         ?>
 <!--        On génère une div à chaque itération avec la date en class pour les différencier-->
-            <div class="calendar-item calendar-item-<?php echo $date; ?>">
-                <a href="<?php $href = '';?>" name="<?php echo $date; ?><?php echo $date == $currentDate ? $href="/Gagne" : $href='/Perdu'?>">
+            <div class="calendar-item calendar-item-<?= $date; ?>">
+                <a name="<?= $date; ?>"<?= $date == $currentDate ? $href="/Gagne" : $href="/Perdu";?> href="<?= $href;?>">
                     <img src="../../Assets/Images/icon.png" alt="">
 <!--                    --><?php //if(!empty($price)):?>
 <!--                        --><?php //print_r($price) ?>
