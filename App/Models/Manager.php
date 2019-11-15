@@ -2,7 +2,7 @@
 
 /**
  * Class Manager
- * Database Connection
+ * Connexion à la base de données
  */
 
 class Manager{

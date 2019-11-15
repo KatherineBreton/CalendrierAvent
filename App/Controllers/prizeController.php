@@ -4,10 +4,12 @@ require_once('../App/Models/prizeModel.php');
 
 /**
  * Class prizeController
+ * Le controller lié aux prix
  */
 class prizeController{
     /**
      * @return array
+     * Affiche tous les prix de la table t_prize
      */
     public function displayPrize(){
         require('../App/Views/displayPrize');

@@ -4,8 +4,16 @@ require_once('../App/Models/userModel.php');
 
 /**
  * Class UserController
+ * Controller lié aux utilisateurs
  */
 class UserController{
+    /**
+     * @return bool
+     * @throws Exception
+     * Fonction qui permet l'inscription.  Elle vérifie que le mail a le bon format et que les deux mots de passe entrés
+     * correspondent.  La requête SQL liée ne s'exécute que si le mail entré n'est pas déjà présent en base de données
+     * (clé unique sur le champ use_mail)
+     */
     public function signUp(){
         require('../App/Views/signUp.html.php');
         $userModel = new userModel();
@@ -27,6 +35,12 @@ class UserController{
         }
     }
 
+    /**
+     * @return array
+     * Fonction qui permet la connexion
+     * Elle vérifie que le mot de passe entré correspond à celui en base de données
+     * Elle inscrit dans la variable $_SESSION les informations de l'utilisateur
+     */
     public function signIn(){
         require('../App/Views/signIn.html.php');
         $userModel = new userModel();
@@ -62,6 +76,10 @@ class UserController{
 //    var_dump($display);
     }
 
+    /**
+     * @return bool
+     * Permet la déconnexion de l'utilisateur
+     */
     public function logout() {
         session_start();
         $_SESSION = array();
@@ -72,6 +90,7 @@ class UserController{
 
     /**
      * @return bool
+     * Fonction qui permet d'écrire un message au support
      */
     public function messageSupport(){
         require('../App/Views/messageSupport.html.php');

@@ -3,6 +3,8 @@
 require_once('../App/Models/adminModel.php');
 /**
  * Class adminController
+ * Controller lié aux utilisateurs ayant des droits administrateur
+ * Les fonctions ont été créées mais n'ont pas encore été implémentées dans les views
  */
 class adminController{
     /**
@@ -22,6 +24,7 @@ class adminController{
 
     /**
      * @return array
+     * Fonction qui liste tous les utilisateurs inscrits
      */
     public function listAllUsers(){
         require('../App/Views/listAllUsers');
@@ -36,6 +39,7 @@ class adminController{
 
     /**
      * @return array
+     * Fonction qui permet d'avoir accès aux messages envoyés au support
      */
 //    Ajouter jointure avec la table envoyer
     public function readMessages(){
@@ -64,15 +68,6 @@ class adminController{
 
         }else{
             echo "Vous devez avoir les droits administrateur pour accéder à cette page";
-        }
-    }
-
-    //fonction choisir
-    public function prizeStat(){
-        if($this->adminVerify()){
-
-        }else{
-            echo "Vous devez avoir les droits d'administrateur pour accéder à cette page";
         }
     }
 }

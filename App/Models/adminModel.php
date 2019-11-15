@@ -2,8 +2,18 @@
 
 require_once('Manager.php');
 
+/**
+ * Class AdminModel
+ * Model qui regroupe les fonctions liées à un utilisateur ayant les droits administrateur
+ * Les fonctions sont créées mais pas encore implémentées au niveau des views
+ */
+
 class AdminModel extends Manager
 {
+    /**
+     * @return array
+     * Fonction qui permet de déterminer si un utilisateur a des droits administrateur
+     */
     public function isAdmin(){
         $db = $this->dbConnect();
 
@@ -12,6 +22,10 @@ class AdminModel extends Manager
         return $isAdmin;
     }
 
+    /**
+     * @return array
+     * Fonction qui liste tous les utilisateurs inscrits (t_user)
+     */
     public function allUsers(){
         $db = $this->dbConnect();
 
@@ -22,7 +36,10 @@ class AdminModel extends Manager
         return $usersInfo;
     }
 
-//    fonction bannir un utilisateur
+    /**
+     * @return bool
+     * Fonction qui permet de bannir un utilisateur
+     */
     public function banUser(){
         $db = $this->dbConnect();
 
@@ -33,6 +50,10 @@ class AdminModel extends Manager
         return $ban;
     }
 
+    /**
+     * @return array
+     * Fonction qui permet de lire un message
+     */
     public function readMessages(){
         $db = $this->dbConnect();
 

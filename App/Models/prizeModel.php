@@ -4,11 +4,13 @@ require_once('Manager.php');
 
 /**
  * Class PrizeModel
+ * Model qui regroupe les fonctions liées aux prix
  */
 class PrizeModel extends Manager
 {
     /**
      * @return array
+     * Liste tous les prix inscrits en base de données dans la table t_prize
      */
     public function allPrize(){
         $db = $this->dbConnect();
@@ -20,6 +22,10 @@ class PrizeModel extends Manager
         return $prizeInfo;
     }
 
+    /**
+     * @return array
+     * Fonction qui liste tous les prix qui ont été tirés (table gagner)
+     */
     public function allWonPrizes(){
         $db = $this->dbConnect();
 
@@ -30,6 +36,11 @@ class PrizeModel extends Manager
         return $allWon;
     }
 
+    /**
+     * @return mixed
+     * Fonction qui permet de piocher aléatoirement un prix parmis la table t_prize, et qui inscrit dans la table gagner
+     * le prix qui a été pioché avec l'utilisateur connecté
+     */
     public function getRandomPrize(){
         $db = $this->dbConnect();
 
