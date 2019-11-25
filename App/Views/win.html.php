@@ -14,6 +14,9 @@ $getPrize = $prizeController->getRandomPrize();
  sur le rayon <?= $getPrize['PRI_APPLYON']?> et utilisable jusqu'à
 ce soir 23h59!</p>
 
+<a href="/Profil">Revenir au profil</a>
+<a href="/Calendrier">Revenir au calendrier</a>
+
 <?php
 $content = ob_get_clean();
 require('template.php');

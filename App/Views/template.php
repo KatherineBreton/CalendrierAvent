@@ -20,6 +20,8 @@
 
 </head>
     <body>
+        <?= include("header.html.php");?>
         <?= $content;?>
+        <?= include("footer.html.php");?>
     </body>
 </html>

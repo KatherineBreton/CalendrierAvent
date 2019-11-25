@@ -38,12 +38,16 @@ class prizeController{
         }
     }
 
-//    Fonction qui vérifie si un user a déjà joué aujourd'hui
+        /***
+     * @return bool
+     * Permet de vérifier si un utilisateur a déjà joué pour une date donnée
+     */
     public function verifyDay(){
         $prizeModel = new PrizeModel();
         $verify = $prizeModel->allWonPrizes();
-//        return $verify;
-        for($i = 0; $i < $verify; $i++){
+        // var_dump($verify[0]['PRI_DATESELECTED']); 
+        // var_dump(count($verify));
+        for($i = 0; $i < count($verify); $i++){
             if(($verify[$i]['PRI_DATESELECTED'] == $this->generateDate()) && ($verify[$i]['USE_ID'] == $_SESSION['id'])){
                 return true;
             }else{

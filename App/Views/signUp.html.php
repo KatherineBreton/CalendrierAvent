@@ -16,6 +16,9 @@ ob_start();?>
         <label for="passwordConfirm">Confirmation du mot de passe</label>
         <input id="passwordConfirm" type="password" name="passwordConfirm" required>
 
+        <label for="acceptCG">J'ai lu et j'accepte les <a href="/ConditionsGeneralesUtilisation">conditions générales d'utilisation</a></label>
+        <input type="checkbox" name="acceptCG">
+
         <input type="submit" value="S'inscrire">
         <a href="Connexion">Se connecter</a>
     </form>
