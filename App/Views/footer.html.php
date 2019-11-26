@@ -1,9 +1,9 @@
 <footer>
-	<ul>
-		<li><a class="link" href="/APropos">À propos</a></li>
-		<li><a class="link" href="/ConditionsGeneralesUtilisation">Conditions générales d'utilisation</a></li>
-		<li><a class="link" href="/MentionsLegales">Mentions légales</a></li>
-		<li><a class="link" href="/Contact">Contact</a></li>
+	<ul class="ul-footer">
+		<li class="li-footer"><a class="link-dark" href="/APropos">À propos</a></li>
+		<li class="li-footer"><a class="link-dark" href="/ConditionsGeneralesUtilisation">Conditions générales d'utilisation</a></li>
+		<li class="li-footer"><a class="link-dark" href="/MentionsLegales">Mentions légales</a></li>
+		<li class="li-footer"><a class="link-dark" href="/Contact">Contact</a></li>
 	</ul>
-	<p>Website designed by K.Breton, A.Blanc, M.Bourdaud'hui, A. Leullier</p>
+	<p class="p-footer">Website designed by K.Breton, A.Blanc, M.Bourdaud'hui, A. Leullier</p>
 </footer>

@@ -20,8 +20,7 @@
 
     <body>
         <?= $content;?>
-        
-
+        <?php include("footer.html.php");?>
     </body>
 
 </html>
