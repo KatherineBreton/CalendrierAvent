@@ -1,5 +1,5 @@
 <header>
-	<img src="" alt="logo fnac">
+	<!-- <img src="../../public/Assets/Images/fnacLogo.png" alt="logo fnac"> -->
 	<nav>
 		
 	</nav>
