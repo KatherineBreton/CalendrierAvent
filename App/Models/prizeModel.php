@@ -29,8 +29,15 @@ class PrizeModel extends Manager
     public function allWonPrizes(){
         $db = $this->dbConnect();
 
-        $req = $db->prepare('SELECT * FROM gagner');
-        $req->execute();
+        $req = $db->prepare('SELECT * 
+                            FROM gagner
+                            INNER JOIN t_prize
+                            ON gagner.PRI_ID = t_prize.PRI_ID
+                            WHERE use_id = :idSession
+                            ORDER BY PRI_DATESELECTED');
+        $req->execute([
+            'idSession' => $_SESSION['id']
+        ]);
         $allWon = $req->fetchAll(PDO::FETCH_ASSOC);
 
         return $allWon;

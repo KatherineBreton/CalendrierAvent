@@ -75,6 +75,7 @@ input, textarea{
 .button-group{
 	width: 80%;
 	margin: auto;
+	margin-top: 20px;
 }
 
 .button-calendar{
@@ -133,4 +134,13 @@ footer{
 .p-footer{
 	font-size: 0.8em;
 	text-align: center;
+}
+
+.histo{
+	list-style-type: none;
+	margin-right: 15px;
+	background-color: #EEEEEE;
+	padding: 5px;
+	border-radius: 5px;
+	margin-top: 10px;
 }

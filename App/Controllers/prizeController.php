@@ -46,10 +46,16 @@ class prizeController{
         $prizeModel = new PrizeModel();
         $verify = $prizeModel->allWonPrizes();
         for($i = 0; $i < count($verify); $i++){
-            var_dump($verify[$i]['PRI_DATESELECTED']);
+            // var_dump($verify[$i]['PRI_DATESELECTED']);
             if(($verify[$i]['PRI_DATESELECTED'] == $this->generateDate()) && ($verify[$i]['USE_ID'] == $_SESSION['id'])){
                 return true;
             }
         }
+    }
+
+    public function allWonPrizes(){
+        $prizeModel = new prizeModel();
+        $allPrizes = $prizeModel->allWonPrizes();
+        return $allPrizes;
     }
 }
