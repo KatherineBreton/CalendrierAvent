@@ -4,8 +4,9 @@ ob_start();?>
 
 <h2>Mentions légales</h2>
 
+<div class="container-static">
 
-<h3>1. Présentation du site</h3>
+<h3 class="titre3">1. Présentation du site</h3>
 
     <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site www.calendrieravent.fr l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
     <ul>
@@ -18,16 +19,16 @@ ob_start();?>
         <li>Crédits : Katherine Breton, Alexis Leullier, Alexandre Blanc, Maxime Bourdaud'hui</li>
     </ul> 
                 
-<h3>2. Conditions générales d’utilisation du site et des services proposés</h3>
+<h3 class="titre3">2. Conditions générales d’utilisation du site et des services proposés</h3>
 
-        <p> L’utilisation du site www.calendrieravent.fr implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site www.calendrieravent.fr sont donc invités à les consulter de manière régulière.
+    <p> L’utilisation du site www.calendrieravent.fr implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site www.calendrieravent.fr sont donc invités à les consulter de manière régulière.
 
-        Ce site est normalement accessible à tout moment aux utilisateurs. Une interruption pour raison de maintenance technique peut être toutefois décidée par Katherine BRETON, qui s’efforcera alors de communiquer préalablement aux utilisateurs les dates et heures de l’intervention.
+    Ce site est normalement accessible à tout moment aux utilisateurs. Une interruption pour raison de maintenance technique peut être toutefois décidée par Katherine BRETON, qui s’efforcera alors de communiquer préalablement aux utilisateurs les dates et heures de l’intervention.
 
-        Le site www.calendrieravent.fr est mis à jour régulièrement par Katherine BRETON. De la même façon, les mentions légales peuvent être modifiées à tout moment : elles s’imposent néanmoins à l’utilisateur qui est invité à s’y référer le plus souvent possible afin d’en prendre connaissance.</p>
+    Le site www.calendrieravent.fr est mis à jour régulièrement par Katherine BRETON. De la même façon, les mentions légales peuvent être modifiées à tout moment : elles s’imposent néanmoins à l’utilisateur qui est invité à s’y référer le plus souvent possible afin d’en prendre connaissance.</p>
 
 
-<h3>3. Description des services fournis</h3>
+<h3 class="titre3">3. Description des services fournis</h3>
     
 
     <p>Le site www.calendrieravent.fr a pour objet de fournir une information concernant l’ensemble des activités de la société.
@@ -37,7 +38,7 @@ ob_start();?>
     Tous les informations indiquées sur le site www.calendrieravent.fr sont données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant sur le site www.calendrieravent.fr ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.</p>
 
 
-<h3>4. Limitations contractuelles sur les données techniques</h3>
+<h3 class="titre3">4. Limitations contractuelles sur les données techniques</h3>
     
 
     <p>Le site utilise la technologie JavaScript.
@@ -45,7 +46,7 @@ ob_start();?>
     Le site Internet ne pourra être tenu responsable de dommages matériels liés à l’utilisation du site. De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour</p>
 
 
-<h3>5. Propriété intellectuelle et contrefaçons</h3>
+<h3 class="titre3">5. Propriété intellectuelle et contrefaçons</h3>
     
 
     <p>Katherine BRETON est propriétaire des droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logo, icônes, sons, logiciels.
@@ -54,7 +55,7 @@ ob_start();?>
 
     Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
 
-<h3>6. Limitations de responsabilité</h3>
+<h3 class="titre3">6. Limitations de responsabilité</h3>
     
 
     <p>Katherine BRETON ne pourra être tenue responsable des dommages directs et indirects causés au matériel de l’utilisateur, lors de l’accès au site www.calendrieravent.fr, et résultant soit de l’utilisation d’un matériel ne répondant pas aux spécifications indiquées au point 4, soit de l’apparition d’un bug ou d’une incompatibilité.
@@ -63,7 +64,7 @@ ob_start();?>
 
     Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs. Katherine BRETON se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, Katherine BRETON se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…).</p>
 
-<h3>7. Gestion des données personnelles</h3>
+<h3 class="titre3">7. Gestion des données personnelles</h3>
     
 
     <p>En France, les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004, l'article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995.
@@ -81,7 +82,7 @@ ob_start();?>
     Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.</p>
 
 
-<h3>8. Liens hypertextes et cookies</h3>
+<h3 class="titre3">8. Liens hypertextes et cookies</h3>
     
 
     <p>Le site www.calendrieravent.fr contient un certain nombre de liens hypertextes vers d’autres sites, mis en place avec l’autorisation de Katherine BRETON. Cependant, Katherine BRETON n’a pas la possibilité de vérifier le contenu des sites ainsi visités, et n’assumera en conséquence aucune responsabilité de ce fait.
@@ -99,13 +100,13 @@ ob_start();?>
     Sous Chrome : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par trois lignes horizontales). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section "Confidentialité", cliquez sur préférences. Dans l'onglet "Confidentialité", vous pouvez bloquer les cookies.</p>
 
 
-<h3>9. Droit applicable et attribution de juridiction</h3>
+<h3 class="titre3">9. Droit applicable et attribution de juridiction</h3>
     
 
     <p>Tout litige en relation avec l’utilisation du site www.calendrieravent.fr est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris.</p>
 
 
-<h3>10. Les principales lois concernées</h3>
+<h3 class="titre3">10. Les principales lois concernées</h3>
     
 
     <p>Loi n° 78-17 du 6 janvier 1978, notamment modifiée par la loi n° 2004-801 du 6 août 2004 relative à l'informatique, aux fichiers et aux libertés.
@@ -113,15 +114,10 @@ ob_start();?>
     Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique.</p>
 
 
-<h3>11. Lexique</h3>
+<h3 class="titre3">11. Lexique</h3>
     <p>
     Utilisateur : Internaute se connectant, utilisant le site susnommé.
     Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>   
-
-        </section>
-    </div>
-
-</div>
 
 </div>
 

@@ -41,13 +41,18 @@ h2{
 	margin-top: 20px;
 }
 
-form{
+form, .container{
 	background-color: #E1A925;
 	max-width: 500px;
     margin: 0 auto 100px;
     padding: 45px;
     text-align: center;
     border-radius: 5px;
+}
+
+.welcome{
+	font-size: 1.5em;
+	font-style: bold;
 }
 
 input, textarea{
@@ -61,4 +66,36 @@ input, textarea{
       font-size: 14px;
       border-radius: 5px;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.button{
+	margin-top: 5px;
+}
+
+.button-group{
+	width: 80%;
+	margin: auto;
+}
+
+.button-calendar{
+	background-color: #E1A925;
+	margin-bottom: 50px;
+	width: 150px;
+}
+
+.button-calendar:hover{
+	background-color: #b48518;
+}
+
+.container-static{
+	background-color: #E1A925;
+	max-width: 900px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: justify;
+    border-radius: 5px;
+}
+
+.titre3{
+	margin-top: 20px;
 }

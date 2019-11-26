@@ -52,10 +52,10 @@ foreach ($keys as $key)
                 </div>
             <?php endforeach;?>
         </div>
-
-        <a href="/Profil">Revenir au profil</a>
       
 </div>
+<a class="btn btn-primary customColor button-calendar" href="/Profil">Revenir au profil</a>
+
 <script type="text/javascript" src="../Assets/JS/lottie.js"></script>
     <script>
         let animation = bodymovin.loadAnimation({
