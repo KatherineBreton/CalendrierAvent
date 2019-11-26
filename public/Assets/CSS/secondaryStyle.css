@@ -1,0 +1,64 @@
+h2{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 3em;
+}
+
+.customColor{
+	background-color: #EEEEEE;
+	color: black;
+	width: 100%;
+	border: solid 1px white;
+}
+
+.customColor:hover{
+	background-color: #b3b3b3;
+	color: black;
+	border: solid 1px white;
+}
+
+.link{
+	color: #EEEEEE;
+}
+
+.link:active{
+	color: #EEEEEE;
+	text-decoration: none;
+}
+
+.link:hover{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+
+.deja{
+	margin-top: 20px;
+	border-top: solid #EEEEEE 2px;
+}
+
+.pdeja{
+	margin-top: 20px;
+}
+
+form{
+	background-color: #E1A925;
+	max-width: 500px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+input, textarea{
+	outline: 0;
+      background: #FFFFFF;
+      width: 100%;
+      border: 0;
+      margin: 10px 0 25px 0;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+      border-radius: 5px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}

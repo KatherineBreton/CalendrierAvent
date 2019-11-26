@@ -13,7 +13,7 @@ ob_start();?>
 	<label>Votre message</label>
 	<textarea></textarea>
 
-	<input type="submit" value="Envoyer">
+	<input class="btn btn-primary customColor" type="submit" value="Envoyer">
 </form>
 
 <?php

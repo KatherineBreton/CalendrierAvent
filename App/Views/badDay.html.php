@@ -4,7 +4,7 @@ ob_start();
 ?>
 
     <h2>Ce n'est pas le bon jour !</h2>
-    <a href="/Calendrier">Revenir au calendrier</a>
+    <a class="btn btn-primary" href="/Calendrier">Revenir au calendrier</a>
 
 <?php
 $content = ob_get_clean();

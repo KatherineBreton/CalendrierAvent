@@ -10,8 +10,8 @@ ob_start();?>
         <label for="message">Message :</label>
         <textarea name="message"></textarea>
 
-        <input type="submit" value="Envoyer le message">
-        <a href="Profil">Afficher mon profil</a>
+        <input class="btn btn-primary customColor" type="submit" value="Envoyer le message">
+        <a class="btn btn-primary customColor"  href="Profil">Afficher mon profil</a>
     </form>
 
 <?php
