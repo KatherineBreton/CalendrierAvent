@@ -44,14 +44,11 @@ class prizeController{
      */
     public function verifyDay(){
         $prizeModel = new PrizeModel();
-        $verify = $prizeModel->allWonPrizes(); 
-        // var_dump(count($verify));
+        $verify = $prizeModel->allWonPrizes();
         for($i = 0; $i < count($verify); $i++){
-            // var_dump($verify[$i]['PRI_DATESELECTED']);
+            var_dump($verify[$i]['PRI_DATESELECTED']);
             if(($verify[$i]['PRI_DATESELECTED'] == $this->generateDate()) && ($verify[$i]['USE_ID'] == $_SESSION['id'])){
                 return true;
-            }else{
-                return false;
             }
         }
     }

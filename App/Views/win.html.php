@@ -12,7 +12,7 @@ $getPrize = $prizeController->getRandomPrize();
 <div class="container">
 	<p>Félicitations <?= $_SESSION['fname']?>!</p>
 	<p>Vous avez gagné un <?= $getPrize['PRI_NAME'];?> qui vous octroie <?= $getPrize['PRI_DESCRIPTION']?>
-	 sur le rayon <?= $getPrize['PRI_APPLYON']?> et utilisable jusqu'à
+	 sur <?= $getPrize['PRI_APPLYON']?> et utilisable jusqu'à
 	ce soir 23h59!</p>
 
 	<a class="btn btn-primary customColor button" href="/Profil">Revenir au profil</a>

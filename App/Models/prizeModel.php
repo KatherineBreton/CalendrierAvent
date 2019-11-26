@@ -44,7 +44,31 @@ class PrizeModel extends Manager
     public function getRandomPrize(){
         $db = $this->dbConnect();
 
-        $req = $db->prepare('SELECT * FROM t_prize ORDER BY rand() LIMIT 1');
+        $req = $db->prepare('
+            (SELECT * 
+            FROM t_prize 
+            WHERE TYP_ID= 2 
+            ORDER BY rand() 
+            LIMIT 15) 
+        UNION
+            (SELECT * 
+            FROM t_prize 
+            WHERE TYP_ID= 1 
+            ORDER BY rand() 
+            LIMIT 80)
+        UNION
+            (SELECT * 
+            FROM t_prize 
+            WHERE TYP_ID=3 
+            ORDER BY rand() 
+            LIMIT 5)
+        UNION
+            (SELECT * 
+            FROM t_prize 
+            WHERE TYP_ID=4 
+            ORDER BY rand() 
+            LIMIT 0)
+        ORDER BY RAND() LIMIT 1');
         $req->execute();
         $randomPrize = $req->fetch(PDO::FETCH_ASSOC);
 //        return $randomPrize;
@@ -61,3 +85,14 @@ class PrizeModel extends Manager
     }
 
 }
+
+// (SELECT * FROM t_prize WHERE TYP_ID= 2 ORDER BY rand() LIMIT 15) 
+// UNION
+//  ( SELECT * FROM t_prize WHERE TYP_ID= 1 ORDER BY rand() LIMIT 80)
+//  UNION
+//  (SELECT * FROM t_prize WHERE TYP_ID=3 ORDER BY rand() LIMIT 5)
+//  UNION
+//  (SELECT * FROM t_prize WHERE TYP_ID=4 ORDER BY rand() LIMIT 0)
+//  ORDER BY RAND() LIMIT 1;
+
+// prepare('SELECT * FROM t_prize ORDER BY rand() LIMIT 1')

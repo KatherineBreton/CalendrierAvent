@@ -6,7 +6,7 @@ $prizeController = new prizeController;
 $currentDate = $prizeController->generateDate();
 // $verify = Vérifie si le joueur a déjà joué aujourd'hui
 $verify = $prizeController->verifyDay();
-// var_dump($verify);
+var_dump($verify);
 
 //Tableau associatif avec les dates en index, et vide au niveau des prix
 $datesInOrder = [];
