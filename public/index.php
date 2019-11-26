@@ -61,14 +61,14 @@ try{
             }else{
                 $signIn = $userController->signIn();
             }
-        }elseif($url = '/APropos'){
-                require('../App/Views/Static/about.html.php');
-        }elseif($url = '/ConditionsGeneralesUtilisation'){
-                require('../App/Views/Static/cgu.html.php');
-        }elseif($url = '/MentionsLegales'){
-                require('../App/Views/Static/legals.html.php');
-        }elseif($url = '/Contact'){
-                require('../App/Views/Static/contact.html.php');
+        }elseif($url == '/APropos'){
+                require('../App/Views/about.html.php');
+        }elseif($url == '/ConditionsGeneralesUtilisation'){
+                require('../App/Views/cgu.html.php');
+        }elseif($url == '/MentionsLegales'){
+                require('../App/Views/legals.html.php');
+        }elseif($url == '/Contact'){
+                require('../App/Views/contact.html.php');
         }
     }
 }catch(Exception $e){

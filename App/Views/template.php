@@ -5,11 +5,8 @@
         <meta charset="utf-8">
         <meta name="description" content="Calendrier de l'Avent"  />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">  />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!--    <link rel="stylesheet" type="text/css" href="../../public/Assets/CSS/" />-->
-    <!--    <link rel="apple-touch-icon" href=""  />-->
-    <!--    <link rel="icon" href="" />-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="../Assets/CSS/style.css"/>
 
@@ -23,7 +20,6 @@
     </head>
 
     <body>
-        <?= include("header.html.php");?>
         <?= $content;?>
         <?= include("footer.html.php");?>
     </body>

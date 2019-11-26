@@ -1,7 +1,6 @@
-<header>
-	<!-- <img src="../../public/Assets/Images/fnacLogo.png" alt="logo fnac"> -->
+<!-- <header>
 	<nav>
-		
+		<img class="fnacLogo" src="../../Assets/Images/fnacLogo.png" alt="logo fnac">
 	</nav>
 
-</header>
+</header> -->

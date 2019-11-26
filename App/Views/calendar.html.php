@@ -6,13 +6,23 @@ $prizeController = new prizeController;
 $currentDate = $prizeController->generateDate();
 // $verify = Vérifie si le joueur a déjà joué aujourd'hui
 $verify = $prizeController->verifyDay();
-var_dump($verify);
+// var_dump($verify);
 
 //Tableau associatif avec les dates en index, et vide au niveau des prix
-$dates = [];
+$datesInOrder = [];
 for($i = 1; $i <= 25; $i++) {
     $day = str_pad($i, 2, '0', STR_PAD_LEFT);
-    $dates["2019-12-$day"] = [];
+    $datesInOrder["2019-12-$day"] = [];
+}
+
+// On mélange les dates
+$dates = [];
+$keys = array_keys($datesInOrder);
+shuffle($keys);
+
+foreach ($keys as $key)
+{
+    $dates[$key] = $datesInOrder[$key];
 }
 
 ?>
@@ -27,12 +37,12 @@ for($i = 1; $i <= 25; $i++) {
         <div class="giant-box">
             <?php foreach($dates as $date => $price):?>
     <!--        On génère une div à chaque itération avec la date en class pour les différencier-->
-                <div class="yellow-block calendar-item-<?= $date; ?>">
-                    <div class="white-box">
+                <div <?= $date == $currentDate ? $class = "yellow-block taken" : $class = "yellow-block"; ?> class= "<?= $class;?> calendar-item-<?= $date; ?>">
+                    <div <?= $date == $currentDate ? $class = "white-box clicked" : $class = "white-box"; ?> class= "<?= $class;?> calendar-item-<?= $date; ?>">
                         <a name="<?= $date; ?>"<?= $date == $currentDate && !$verify ? $href="/Gagne?date=" . $currentDate : $href="/mauvaisJour";?> href="<?= $href;?>">
                             <p><?php
-                            $dayToShow = substr($date, 8);
-                            echo $dayToShow;
+                            $daysToShow = substr($date, 8);
+                            echo $daysToShow;
                             ?></p>
                             <!-- <img src="../../Assets/Images/icon.png" alt=""> -->
         <!--                    --><?php //if(!empty($price)):?>
@@ -43,17 +53,19 @@ for($i = 1; $i <= 25; $i++) {
                 </div>
             <?php endforeach;?>
         </div>
+
+        <a href="/Profil">Revenir au profil</a>
       
-</div> 
+</div>
 
     <script>
-        var animation = bodymovin.loadAnimation({
-        container: document.getElementById('lottie'), // Required
-        path: '../../public/Assets/CSS/Flocon.json', // Required
-        renderer: 'svg', // Required
-        loop: true, // Optional
-        autoplay: true, // Optional
-        name: "Hello World", // Name for future reference. Optional.
+        let animation = bodymovin.loadAnimation({
+            container: document.getElementById('lottie'), // Required
+            path: 'Flocon.json', // Required
+            renderer: 'svg', // Required
+            loop: true, // Optional
+            autoplay: true, // Optional
+            name: "Hello World", // Name for future reference. Optional.
         })
     </script>
 
