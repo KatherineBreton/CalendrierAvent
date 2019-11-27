@@ -21,6 +21,7 @@ class UserController{
             if (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['mail'])) {
                 if ($_POST['password'] == $_POST['passwordConfirm']) {
                     $signUp = $userModel->signUp();
+                    header('Location: /Profil');
 //                        var_dump($signUp);
                     if ($signUp == false) {
                         throw new Exception("Impossible d'ajouter l'utilisateur");
@@ -73,7 +74,6 @@ class UserController{
         $display = $userModel->displayProfile();
 
         return $display;
-//    var_dump($display);
     }
 
     /**

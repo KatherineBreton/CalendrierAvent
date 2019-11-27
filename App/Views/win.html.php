@@ -11,9 +11,8 @@ $getPrize = $prizeController->getRandomPrize();
 
 <div class="container">
 	<p>Félicitations <?= $_SESSION['fname']?>!</p>
-	<p>Vous avez gagné un <?= $getPrize['PRI_NAME'];?> qui vous octroie <?= $getPrize['PRI_DESCRIPTION']?>
-	 sur <?= $getPrize['PRI_APPLYON']?> et utilisable jusqu'à
-	ce soir 23h59!</p>
+	<p>Vous avez gagné un <?= utf8_encode($getPrize['PRI_NAME']);?> qui vous octroie <?= utf8_encode($getPrize['PRI_DESCRIPTION'])?>
+	 sur <?= utf8_encode($getPrize['PRI_APPLYON'])?> et utilisable jusqu'à ce soir 23h59!</p>
 
 	<a class="btn btn-primary customColor button" href="/Profil">Revenir au profil</a>
 	<a class="btn btn-primary customColor button" href="/Calendrier">Revenir au calendrier</a>

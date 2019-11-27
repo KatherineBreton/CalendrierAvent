@@ -5,6 +5,7 @@ ob_start();?>
 <?php 
 $prizeController = new prizeController;
 $userPrizes = $prizeController->allWonPrizes();
+// var_dump($_SESSION);
 // var_dump($userPrizes);
 ?>
 
@@ -21,7 +22,7 @@ $userPrizes = $prizeController->allWonPrizes();
 			<?php
 			for($i = 0; $i < count($userPrizes); $i++){
 			?>
-			<li class="histo">Le <?= $userPrizes[$i]['PRI_DATESELECTED']?>, vous avez gagné <?= $userPrizes[$i]['PRI_NAME']?> qui vous octroie <?= $userPrizes[$i]['PRI_DESCRIPTION']?> sur <?= $userPrizes[$i]['PRI_APPLYON']?></li>
+			<li class="histo">Le <?= $userPrizes[$i]['PRI_DATESELECTED']?>, vous avez gagné <?= utf8_encode($userPrizes[$i]['PRI_NAME'])?> qui vous octroie <?= utf8_encode($userPrizes[$i]['PRI_DESCRIPTION'])?> sur <?= utf8_encode($userPrizes[$i]['PRI_APPLYON'])?></li>
 			<?php } ?>
 		</ul>
 	</div>

@@ -1,30 +1,25 @@
 <?php
 $title = "Calendrier de l'Avent";
 ob_start();
-
 $prizeController = new prizeController;
 $currentDate = $prizeController->generateDate();
 // $verify = Vérifie si le joueur a déjà joué aujourd'hui
-// $verify = $prizeController->verifyDay();
+$verify = $prizeController->verifyDay();
 // var_dump($verify);
-
 //Tableau associatif avec les dates en index, et vide au niveau des prix
 $datesInOrder = [];
 for($i = 1; $i <= 25; $i++) {
     $day = str_pad($i, 2, '0', STR_PAD_LEFT);
     $datesInOrder["2019-12-$day"] = [];
 }
-
 // On mélange les dates
 $dates = [];
 $keys = array_keys($datesInOrder);
 shuffle($keys);
-
 foreach ($keys as $key)
 {
     $dates[$key] = $datesInOrder[$key];
 }
-
 ?>
 <div id="lottie"></div> 
  <div class="calendar-box">

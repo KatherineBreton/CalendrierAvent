@@ -20,6 +20,7 @@ try{
                 $displayProfile = $userController->displayProfile();
             }else{
                 $signUp = $userController->signUp();
+                $signIn = $userController->signIn();
             }
         }elseif($url == '/Connexion'){
             if($_SESSION){

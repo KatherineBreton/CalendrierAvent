@@ -49,10 +49,10 @@ class UserModel extends Manager
     public function displayProfile(){
         $db = $this->dbConnect();
 
-        $req = $db->prepare("SELECT use_mail, use_fname, use_password, DATE_FORMAT(use_date, '%d/%m/%Y') AS use_dateFR FROM t_user WHERE use_id = " . $_SESSION['id']);
+        $req = $db->prepare("SELECT use_mail, use_fname, use_password, DATE_FORMAT(use_date, '%d/%m/%Y') AS FRDATE FROM t_user WHERE use_id = " . $_SESSION['id']);
         $req->execute();
         $userProfile = $req->fetchAll(PDO::FETCH_ASSOC);
-
+        // var_dump($userProfile);
         return $userProfile;
     }
 
