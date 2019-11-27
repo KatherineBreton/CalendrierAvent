@@ -33,6 +33,7 @@ $userPrizes = $prizeController->allWonPrizes();
 		<a class="btn btn-primary customColor button" href="/Calendrier">Accéder au calendrier</a>
 	</div>
 </div>
+<?php include("footer.html.php");?>
 <?php
 $content = ob_get_clean();
 require('template.php');

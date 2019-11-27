@@ -13,7 +13,7 @@ ob_start();?>
         <input class="btn btn-primary customColor" type="submit" value="Envoyer le message">
         <a class="btn btn-primary customColor"  href="Profil">Afficher mon profil</a>
     </form>
-
+<?php include("footer.html.php");?>
 <?php
 $content = ob_get_clean();
 require('template.php');

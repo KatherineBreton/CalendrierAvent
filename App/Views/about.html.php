@@ -22,7 +22,7 @@ ob_start();?>
 		<li>Alexandre BLANC</li>
 	</ul>
 </div>
-
+<?php include("footer.html.php");?>
 <?php
 $content = ob_get_clean();
 require('template.php');

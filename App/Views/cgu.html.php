@@ -80,7 +80,7 @@ ob_start();?>
 	Pour toute question relative aux présentes conditions d’utilisation du site, vous pouvez nous écrire à l’adresse suivante : 123 rue Parisienne, PARIS 75000.
 	</p>
 </div>
-
+<?php include("footer.html.php");?>
 <?php
 $content = ob_get_clean();
 require('template.php');

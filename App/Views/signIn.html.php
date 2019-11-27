@@ -17,6 +17,7 @@ ob_start();?>
 	        <a class="btn btn-primary customColor" href="Inscription">S'inscrire</a>
         </div>
     </form>
+    <?php include("footer.html.php");?>
 <?php
 $content = ob_get_clean();
 require('template.php');

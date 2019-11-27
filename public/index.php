@@ -20,7 +20,7 @@ try{
                 $displayProfile = $userController->displayProfile();
             }else{
                 $signUp = $userController->signUp();
-                $signIn = $userController->signIn();
+                // $signIn = $userController->signIn();
             }
         }elseif($url == '/Connexion'){
             if($_SESSION){
@@ -63,13 +63,15 @@ try{
                 $signIn = $userController->signIn();
             }
         }elseif($url == '/APropos'){
-                require('../App/Views/about.html.php');
+            require('../App/Views/about.html.php');
         }elseif($url == '/ConditionsGeneralesUtilisation'){
-                require('../App/Views/cgu.html.php');
+            require('../App/Views/cgu.html.php');
         }elseif($url == '/MentionsLegales'){
-                require('../App/Views/legals.html.php');
+            require('../App/Views/legals.html.php');
         }elseif($url == '/Contact'){
-                require('../App/Views/contact.html.php');
+            require('../App/Views/contact.html.php');
+        }elseif($url == '/Accueil'){
+            require('../App/Views/home.html.php');
         }
     }
 }catch(Exception $e){

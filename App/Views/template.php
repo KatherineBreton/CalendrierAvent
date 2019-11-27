@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="../Assets/CSS/style.css"/>
         <link rel="stylesheet" type="text/css" href="../Assets/CSS/secondaryStyle.css"/>
+        <link rel="stylesheet" type="text/css" href="../Assets/CSS/accueil.css">  
 
         <script
                 src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -20,7 +21,8 @@
 
     <body>
         <?= $content;?>
-        <?php include("footer.html.php");?>
+        
+        
     </body>
 
 </html>

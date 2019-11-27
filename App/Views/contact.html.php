@@ -15,7 +15,7 @@ ob_start();?>
 
 	<input class="btn btn-primary customColor" type="submit" value="Envoyer">
 </form>
-
+<?php include("footer.html.php");?>
 <?php
 $content = ob_get_clean();
 require('template.php');

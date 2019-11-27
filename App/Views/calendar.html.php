@@ -62,7 +62,7 @@ foreach ($keys as $key)
             name: "Hello World", // Name for future reference. Optional.
             })
     </script>
-
+<?php include("footer.html.php");?>
 <?php
 $content = ob_get_clean();
 require('template.php');

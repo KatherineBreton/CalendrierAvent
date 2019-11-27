@@ -1,0 +1,130 @@
+/*html {
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #EEEEEE;
+}*/
+
+#lottie {
+  width: 100%;
+  height: 100%;
+}
+
+.accroche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #282828;
+  opacity: 0.9;
+  border-radius: 23px;
+}
+.accroche h1 {
+  font-size: 4rem;
+  color: #E1A925;
+  text-align: center;
+}
+.accroche a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  background-color: #E1A925;
+  padding: 15px;
+  border-radius: 23px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.8s ease;
+}
+.accroche a:hover {
+  background-color: #282828;
+  border: 2px solid #E1A925;
+  color: #E1A925;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.button-block {
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1300px) {
+  .accroche {
+    top: 40%;
+  }
+  .accroche h1 {
+    font-size: 3rem;
+    padding: 0 30px;
+  }
+}
+@media (max-width: 1000px) {
+  .accroche {
+    top: 30%;
+    width: 90%;
+  }
+  .accroche h1 {
+    font-size: 2rem;
+    padding: 0 30px;
+  }
+  .accroche a {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 750px) {
+  .accroche {
+    top: 20%;
+    width: 90%;
+  }
+  .accroche h1 {
+    font-size: 1.8rem;
+    padding: 0 30px;
+  }
+  .accroche a {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 550px) {
+  .accroche {
+    top: 15%;
+    width: 90%;
+  }
+  .accroche h1 {
+    font-size: 1.2rem;
+    padding: 0 30px;
+  }
+  .accroche a {
+    font-size: 1rem;
+  }
+
+  .button-block {
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .accroche {
+    top: 10%;
+    width: 90%;
+  }
+  .accroche h1 {
+    font-size: 1rem;
+    padding: 0 30px;
+  }
+  .accroche a {
+    font-size: 0.8rem;
+  }
+
+  .button-block {
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+}
+
+/*# sourceMappingURL=accueil.css.map */
